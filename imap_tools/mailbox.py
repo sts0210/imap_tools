@@ -215,7 +215,7 @@ class BaseMailBox:
         uid_str = clean_uids(uid_list)
         if not uid_str:
             return None
-        copy_result = self.copy(uid_str, destination_folder)
+        copy_result = self.copy(uid_str, encode_folder(destination_folder))
         delete_result = self.delete(uid_str)
         return copy_result, delete_result
 
